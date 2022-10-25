@@ -1,0 +1,92 @@
+[
+    {
+      "name": "ig_did",
+      "value": "EF999AED-9FD5-48D7-BF98-F44632A0DD2A",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1699412443.27675,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "ig_nrcb",
+      "value": "1",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1696388443.276762,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "name": "mid",
+      "value": "Yzuh2wALAAE-PRTeOfr-w1EL_7On",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1699412443.276772,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "name": "datr",
+      "value": "PaBSY7C_c4R2MP8fbyVGkbKv",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1700919359.840671,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "shbid",
+      "value": "\"2614\\05429779989119\\0541698192268:01f724b75691520e20c58fa39313eb17ef0570f297ac7e09fcd2630ac0ab8b5c368f8496\"",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1667261068.782762,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "shbts",
+      "value": "\"1666656268\\05429779989119\\0541698192268:01f7a734d76b48a42db2afffbcf9427c592c47ea30fccea666faa3a6b3860c305fb65406\"",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1667261068.782776,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "ds_user_id",
+      "value": "49868961177",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1674481012.835069,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "name": "csrftoken",
+      "value": "xQDg9zRxlmDXq5MF8fxsdJzRxHRhEoiW",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1698154612.835026,
+      "httpOnly": false,
+      "secure": true
+    },
+    {
+      "name": "sessionid",
+      "value": "49868961177%3AvlSqSQJACb1Qha%3A2%3AAYf54EzvEbENRxDqFLUnFPEHx2PBxuPxqdmJ5ye7Gg",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": 1698202858.307477,
+      "httpOnly": true,
+      "secure": true
+    },
+    {
+      "name": "rur",
+      "value": "\"NCG\\05449868961177\\0541698241012:01f7c7cebf2a73c2163d181e21740347aa413aa9b5f54cf1db68a2fdea7833168ec35084\"",
+      "domain": ".instagram.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    }
+  ]
