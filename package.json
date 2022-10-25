@@ -1,0 +1,25 @@
+{
+  "name": "instosint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanceagher/instosint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vanceagher/instosint/issues"
+  },
+  "homepage": "https://github.com/Vanceagher/instosint#readme",
+  "dependencies": {
+    "image-downloader": "^4.3.0",
+    "puppeteer": "^19.1.2",
+    "request": "^2.88.2"
+  }
+}

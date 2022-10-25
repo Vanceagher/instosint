@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 request = require('request');
+const download = require('image-downloader');              
 
 
 (async () => {
@@ -25,7 +26,7 @@ request = require('request');
       console.log(JSON.parse(id).users[0].user.pk);
       
       id = JSON.parse(id).users[0].user.pk;
-      var count = 25;
+      var count = 5;
 
       const followers = await page.evaluate((id, count) => {
         const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
@@ -77,7 +78,12 @@ request = require('request');
 
       console.log(followers);
 
-      await page.goto('https://instagram.com/' + igUsername);
+      var pics = [];
+
+      for (let i = 0; i < followers.length; i++) {
+        
+        console.log(followers[i])
+  await page.goto('https://instagram.com/' + followers[i]);
       await page.waitForSelector('._aabd');
 
       const photos = await page.evaluate(() => {
@@ -89,6 +95,24 @@ request = require('request');
         return photos;
      });
 
-     console.log(photos);
+pics.push(photos);
+
+    }
+
+    console.log(pics)
+
+     //var url = photos[0];                    
+
+     const options = {
+       url: photos[0],
+       dest: '/workspaces/instosint/photos',               // will be saved to /path/to/dest/image.jpg
+     };
+     
+     download.image(options)
+       .then(({ filename }) => {
+         console.log('Saved to', filename); // saved to /path/to/dest/image.jpg
+       })
+       .catch((err) => console.error(err));
+
 
 })();
