@@ -26,7 +26,7 @@ const download = require('image-downloader');
       console.log(JSON.parse(id).users[0].user.pk);
       
       id = JSON.parse(id).users[0].user.pk;
-      var count = 5;
+      var count = 100;
 
       const followers = await page.evaluate((id, count) => {
         const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
@@ -80,11 +80,18 @@ const download = require('image-downloader');
 
       var pics = [];
 
-      for (let i = 0; i < followers.length; i++) {
+      var nFollowers = followers.splice(0,10);
+
+      for (let i = 0; i < nFollowers.length; i++) {
         
-        console.log(followers[i])
-  await page.goto('https://instagram.com/' + followers[i]);
-      await page.waitForSelector('._aabd');
+        console.log(nFollowers[i])
+  await page.goto('https://instagram.com/' + nFollowers[i]);
+
+  try {
+      await page.waitForSelector('._aabd', {timeout: 1000});
+  } catch {
+    console.log(nFollowers[i] + " is private");
+  }
 
       const photos = await page.evaluate(() => {
         var photos = [];
@@ -95,16 +102,22 @@ const download = require('image-downloader');
         return photos;
      });
 
-pics.push(photos);
+     for (let i = 0; i < photos.length; i++) {
+      pics.push(photos[i]);
+      
+     }
 
     }
 
-    console.log(pics)
+    for (let i = 0; i < pics.length; i++) {
+
+      if(pics[i].length > 0) {
+    console.log(pics[i])
 
      //var url = photos[0];                    
 
      const options = {
-       url: photos[0],
+       url: pics[i],
        dest: '/workspaces/instosint/photos',               // will be saved to /path/to/dest/image.jpg
      };
      
@@ -113,6 +126,7 @@ pics.push(photos);
          console.log('Saved to', filename); // saved to /path/to/dest/image.jpg
        })
        .catch((err) => console.error(err));
-
+      }
+      }
 
 })();
