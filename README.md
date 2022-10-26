@@ -6,3 +6,17 @@ For this to work well you need your Instagram cookies, I use a Chrome extenbsion
 Put the downloaded JSON file in your project directory and rename it to `cookies.json`
 
 Set the username on line 23 and run `node index.js` or `node .` (CLI support coming soon)
+
+
+### How it works
+Convert username to ID via instagram web search API
+Log into Instagram on puppeteer with cookies
+Get public followers from ID.
+Cut list down to 100 followers
+Visit each profile with puppeteer and download all photos on page if any
+Run photos taken outside through GeoEstimation API
+Export to CSV file
+
+The current export system is meant to be put into this [GeoPlotter](https://mobisoftinfotech.com/tools/plot-multiple-points-on-map/)
+I am working on making a heat map locally 
+
