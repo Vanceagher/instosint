@@ -7,6 +7,17 @@ Put the downloaded JSON file in your project directory and rename it to `cookies
 
 Set the username on line 23 and run `node index.js` or `node .` (CLI support coming soon)
 
+```
+git clone https://github.com/Vanceagher/instosint/tree/main
+cd instosint
+npm i
+node index.js
+```
+When index is done downloading, ctrl + c
+```
+node locate.js
+```
+
 
 ### How it works
 * Convert username to ID via instagram web search API
