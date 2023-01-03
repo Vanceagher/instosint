@@ -1,5 +1,5 @@
 # DEPRECATED
-Not sure why it's not working but I don't feel like fixing, probably a simple fix, feel free to PR
+Not sure why it's not working but I don't feel like fixing, probably a simple fix, feel free to PR. Just lower the amount of followers to download images from drastically to avoid a temporary API ban if you are developing.
 # instosint
 ### An AI based Instagram OSINT tool
 
