@@ -1,4 +1,4 @@
-# !!! Deprecated
+# DEPRECATED
 Not sure why it's not working but I don't feel like fixing, probably a simple fix, feel free to PR
 # instosint
 ### An AI based Instagram OSINT tool
