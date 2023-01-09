@@ -1,3 +1,12 @@
+const puppeteer = require('puppeteer');
+const fs = require('fs').promises;
+const fs2 = require('fs');
+request = require('request');
+const download = require('image-downloader');   
+const fetch = require('node-fetch');
+var request = require('request');
+const path = require( 'path' );
+
 count = 0;
 fs2.readdirSync("./photos").forEach(file => {
     count++;
